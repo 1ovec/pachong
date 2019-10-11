@@ -1,27 +1,8 @@
 package com.example.pachong.utils;
 
-import jodd.http.*;
-import jodd.http.HttpRequest;
-import jodd.http.HttpResponse;
-import org.apache.http.*;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
 public class Httputil {
 
-  public static String postMethod(String url, String postStr) {
+  /*public static String postMethod(String url, String postStr) {
     String rst = "";
     try{
       HttpRequest httpRequest = HttpRequest.post(url).timeout(5000);
@@ -104,7 +85,7 @@ public class Httputil {
       e.printStackTrace();
     }
     return res;
-  }
+  }*/
 
 
 }

@@ -1,25 +1,7 @@
 package com.example.pachong.utils;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.JSONSerializer;
-import com.alibaba.fastjson.serializer.SerializeWriter;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.serializer.ValueFilter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.*;
-import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Administrator on 2017/3/24.
@@ -28,7 +10,7 @@ public class JsonUtil {
 
   private static final Logger logger = LoggerFactory.getLogger(JsonUtil.class);
 
-  public static Map<String, Object> toMap(JsonObject json) {
+  /*public static Map<String, Object> toMap(JsonObject json) {
     Map<String, Object> map = new HashMap<String, Object>();
     Set<Entry<String, JsonElement>> entrySet = json.entrySet();
     for (Iterator<Entry<String, JsonElement>> iter = entrySet.iterator(); iter.hasNext(); ) {
@@ -113,13 +95,13 @@ public class JsonUtil {
     return obj;
   }
 
-  /**
+  *//**
    * 根据key从JSONObject对象中取得对应值
    * @param json
    * @param key
    * @return
    * @throws JSONException
-   *//*
+   *//**//*
       public static String getString(JsonObject json, String key) throws JSONException
 	    {
 	        String retVal = null;
@@ -133,9 +115,9 @@ public class JsonUtil {
 	        }
 	        return retVal;
 	    }
-	      */
+	      *//*
 
-  /**
+  *//**
    * 给JavaBean的每个属性设值
    *
    * @param type
@@ -144,7 +126,7 @@ public class JsonUtil {
    * @param bean
    * @throws IllegalArgumentException
    * @throws IllegalAccessException
-   */
+   *//*
   private static void setValue(String type, Object value, Method method, Object bean) {
     if (value != null && !"".equals(value)) {
       try {
@@ -249,9 +231,9 @@ public class JsonUtil {
   }
 
 
-  /**
+  *//**
    * 将Model转换成JSONObject
-   *//*
+   *//**//*
 	    @SuppressWarnings("unchecked")
 	    public static JSONObject coverModelToJSONObject(Object o) throws Exception{
 	        JSONObject json = new JSONObject();
@@ -265,11 +247,11 @@ public class JsonUtil {
 	    }
 
 
-	    */
+	    *//*
 
-  /**
+  *//**
    * 将list转换成JSONArray
-   *//*
+   *//**//*
 	    public static JSONArray coverModelToJSONArray(List list) throws Exception{
 	        JSONArray array = null;
 	        if(list.isEmpty()){
@@ -280,7 +262,7 @@ public class JsonUtil {
 	            array.put(coverModelToJSONObject(o));
 	        }
 	        return array;
-	    }  */
+	    }  *//*
   @SuppressWarnings("unchecked")
   private static Object invokeMethod(Class c, String fieldName, Object o) {
     String methodName = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
@@ -325,12 +307,12 @@ public class JsonUtil {
 
   };
 
-  /**
+  *//**
    * 对象转成JSON格式字符串
    *
    * @param obj
    * @return
-   */
+   *//*
   public static String toJson(Object obj) {
 
     SerializeWriter sw = new SerializeWriter();
@@ -348,24 +330,24 @@ public class JsonUtil {
     return sw.toString();
   }
 
-  /**
+  *//**
    * 将Json字符串转换成指定的pojoClass类型的对象
    *
    * @param jsonString json字符串
    * @param pojoClass
    * @return
-   */
+   *//*
   public static Object jsonStringToObject(String jsonString,
                                           Class<?> pojoClass) {
     return JSON.parseObject(jsonString, pojoClass);
   }
 
-  /**
+  *//**
    * 将字符串转换成Map对象返回
    *
    * @param jsonString json字符串
    * @return
-   */
+   *//*
   public static Map<String, Object> getMapFromJson(String jsonString) {
     com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(jsonString);
     Map<String, Object> map = new HashMap<String, Object>();
@@ -377,24 +359,24 @@ public class JsonUtil {
     return map;
   }
 
-  /**
+  *//**
    * 字符串是否包含属性key
    *
    * @param jsonString json字符串
    * @return
-   */
+   *//*
   public static boolean containsKey(String jsonString, String key) {
     com.alibaba.fastjson.JSONObject jsonObject = com.alibaba.fastjson.JSONObject.parseObject(jsonString);
     return jsonObject.containsKey(key);
   }
 
 
-  /**
+  *//**
    * @param srcData  过滤信息源
    * @param propName 敏感属性字段
    * @return data     返回过滤后的信息源
    * @Description: 过滤敏感信息
-   */
+   *//*
   public String filterSensitiveProperty(String srcData, String propName) {
     StringBuffer sb = new StringBuffer();
     try {
@@ -409,7 +391,7 @@ public class JsonUtil {
       return srcData;
     }
     return sb.toString();
-  }
+  }*/
 
 }
 
